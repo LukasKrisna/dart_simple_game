@@ -1,5 +1,6 @@
 import 'package:dart_simple_game/character.dart';
 
-class Monster extends Character {
+abstract class Monster extends Character {
   String eatHuman() => "Grrr... Delicious....";
+  String move();
 }
