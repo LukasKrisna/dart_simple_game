@@ -6,6 +6,7 @@ import 'package:dart_simple_game/jellyfish_monster.dart';
 import 'package:dart_simple_game/jellyroach_monster.dart';
 import 'package:dart_simple_game/knight.dart';
 import 'package:dart_simple_game/monster.dart';
+import 'package:dart_simple_game/start_game.dart';
 
 void main(List<String> arguments) {
   Hero h = Hero();
@@ -13,9 +14,11 @@ void main(List<String> arguments) {
   Monster mF = JellyfishMonster();
   CockroachMonster cF = CockroachMonster();
   Knight k = Knight();
+  StartGame sg = StartGame(loading: 'Load game..');
 
   List<Monster> monsters = [];
 
+  print(sg.loading);
   print(k.drink());
 
   // monsters.add(JellyfishMonster());
