@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:dart_simple_game/cockroach_monster.dart';
 import 'package:dart_simple_game/drink_ability_mixin.dart';
+import 'package:dart_simple_game/exit_the_game.dart';
 import 'package:dart_simple_game/flying_monster.dart';
 import 'package:dart_simple_game/hero.dart';
 import 'package:dart_simple_game/jellyfish_monster.dart';
@@ -21,6 +24,11 @@ void main(List<String> arguments) {
   print(sg.loading);
   print(k.drink());
 
+  var e = ExitTheGame('Game1', exitGame: (_) {
+    print('Exit Game..');
+  });
+
+  print(e);
   // monsters.add(JellyfishMonster());
   // monsters.add(CockroachMonster());
   // monsters.add(JellyroachMonster());
