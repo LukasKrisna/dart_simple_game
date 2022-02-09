@@ -1,8 +1,10 @@
 import 'package:dart_simple_game/cockroach_monster.dart';
+import 'package:dart_simple_game/drink_ability_mixin.dart';
 import 'package:dart_simple_game/flying_monster.dart';
 import 'package:dart_simple_game/hero.dart';
 import 'package:dart_simple_game/jellyfish_monster.dart';
 import 'package:dart_simple_game/jellyroach_monster.dart';
+import 'package:dart_simple_game/knight.dart';
 import 'package:dart_simple_game/monster.dart';
 
 void main(List<String> arguments) {
@@ -10,23 +12,26 @@ void main(List<String> arguments) {
   // Monster m = Monster();
   Monster mF = JellyfishMonster();
   CockroachMonster cF = CockroachMonster();
+  Knight k = Knight();
 
   List<Monster> monsters = [];
 
-  monsters.add(JellyfishMonster());
-  monsters.add(CockroachMonster());
-  monsters.add(JellyroachMonster());
+  print(k.drink());
 
-  print((mF as JellyfishMonster).swim());
+  // monsters.add(JellyfishMonster());
+  // monsters.add(CockroachMonster());
+  // monsters.add(JellyroachMonster());
 
-  for (Monster m in monsters) {
-    if (m is FlyingMonster) {
-      // print(m.eatHuman());
-      // print(m.swim());
-      // print(m.move());
-      print((m as FlyingMonster).fly());
-    }
-  }
+  // print((mF as JellyfishMonster).swim());
+
+  // for (Monster m in monsters) {
+  //   if (m is DrinkAbilityMixin) {
+  //     // print(m.eatHuman());
+  //     // print(m.swim());
+  //     // print(m.move());
+  //     print((m as DrinkAbilityMixin).drink());
+  //   }
+  // }
   // h.healthPoint = -10;
   // m.healthPoint = 10;
 
